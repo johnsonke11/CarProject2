@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+     Smart Car
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3 style="text-align:center">Your Profile</h3>
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/profilepicture.png">
+      </ion-avatar>
+      <h2>{{person.name}}</h2>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="call" item-start></ion-icon>
+      <ion-label>Emergency Phone Number</ion-label>
+      <ion-note item-end>
+        {{person.phonenumber}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="card" item-start></ion-icon>
+      <ion-label>Payment Method</ion-label>
+      <ion-select [(ngModel)]="paymentobj">
+        <ion-option value="paypal">Paypal: {{payment.paypal}}</ion-option>
+        <ion-option value="card">Card: {{payment.type}} : {{payment.publiccardnum}}</ion-option>
+        <ion-option value="applepay">Apple Pay </ion-option>
+      </ion-select>
+    </ion-item>
+    <button ion-button full (click)="goToEdit()">Edit Profile</button>
+    <button ion-button full (click)="goToPayment()">Edit Payment</button>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Smart Car</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3 style="text-align:center">Edit Profile</h3>
+  <ion-card>
+    <ion-list>
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/profilepicture.png">
+        </ion-avatar>
+        <ion-input type="text" placeholder="Name" [(ngModel)]="person.name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="call" item-start></ion-icon>
+        <ion-input type="text" placeholder="Phone Number" [(ngModel)]="person.phonenumber"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button full (click)="addperson()">Save Profile </button>
+</ion-card>
+</ion-content>

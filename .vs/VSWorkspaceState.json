@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\resources",
+    "\\src",
+    "\\src\\app",
+    "\\src\\pages",
+    "\\src\\pages\\editpayment",
+    "\\src\\pages\\nearbyrides",
+    "\\src\\pages\\profile",
+    "\\src\\pages\\Ride",
+    "\\src\\theme"
+  ],
+  "SelectedNode": "\\src\\pages\\nearbyrides\\nearbyrides.html",
+  "PreviewInSolutionExplorer": false
+}

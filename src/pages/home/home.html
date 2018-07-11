@@ -1,17 +1,98 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Smart Car</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding class="outer-content">
+  <h3 style="text-align:center">Smart Car</h3>
+  <ion-card style="text-align:center">
+  
+  <ion-img style="width: 225px; height: 130px; display:block; margin-left:auto; margin-right:auto;" src="../../assets/imgs/smartcar.jpg"></ion-img>
+  <ion-card-header>
+      Smart Car Starter
+  </ion-card-header>
+  <ion-card-content>
+      Our cars will pick you up with your phone and drop you off anywhere!
+  </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header style="text-align:center">Your scheduled rides</ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let ride of rides | async">
+          <ion-list>
+            <ion-item>
+              <ion-icon name="compass" item-start></ion-icon> <h2>Start Address</h2>
+              <p>{{ride.startaddress}}</p>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="compass" item-start></ion-icon><h2>End Address</h2>
+              <p>{{ride.endaddress}}</p>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="cash" item-start></ion-icon><h2>Cost</h2>
+              <p>{{ride.cost}}</p>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+      </ion-list>
+      
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header style="text-align:center">Your passenger rides</ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let ride2 of rides2 | async">
+          <ion-list>
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="../../assets/imgs/profilepicture.png">
+              </ion-avatar>
+              <h2>Name</h2>
+              <p>{{ride2.personname}}</p>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="compass" item-start></ion-icon> <h2>Start Address</h2>
+              <p>{{ride2.startaddress}}</p>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="compass" item-start></ion-icon><h2>End Address</h2>
+              <p>{{ride2.endaddress}}</p>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="cash" item-start></ion-icon><h2>Cost</h2>
+              <p>{{ride2.cost}}</p>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item *ngFor="let ride3 of rides3 | async">
+          <ion-list>
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="../../assets/imgs/profilepicture.png">
+              </ion-avatar>
+              <h2>Name</h2>
+              <p>{{ride3.personname}}</p>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="compass" item-start></ion-icon> <h2>Start Address</h2>
+              <p>{{ride3.startaddress}}</p>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="compass" item-start></ion-icon><h2>End Address</h2>
+              <p>{{ride3.endaddress}}</p>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="cash" item-start></ion-icon><h2>Cost</h2>
+              <p>{{ride3.cost}}</p>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

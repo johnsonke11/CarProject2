@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Smart Car
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h3 style="text-align:center"> Start A Ride </h3>
+    <agm-map style="height:40%" [longitude]="startlocation.lng" [latitude]="startlocation.lat" [zoom]="16">
+      <agm-marker [longitude]="startlocation.lng" [latitude]="startlocation.lat">
+        <agm-info-window>
+          <strong>Start Location</strong>
+        </agm-info-window>
+      </agm-marker>
+    </agm-map>
+  <ion-card>
+    <ion-list>
+      <ion-card-header style="text-align:center">
+        Where do you want to go?
+      </ion-card-header>
+      <ion-item>
+        <ion-icon name="locate" item-start></ion-icon>
+        <ion-input type="text" placeholder="Start Address" [(ngModel)]="startaddress"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="locate" item-start></ion-icon>
+        <ion-input type="text" placeholder="End Address" [(ngModel)]="endaddress"></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <button ion-button full (click)="updateStartAddress()">Update Start </button>
+  <button ion-button full (click)="startRide()">Start Ride </button>
+</ion-content>
